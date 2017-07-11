@@ -25,11 +25,13 @@ The SigmaEditorViewRecolor settings node can contain the following settings:
 
   - **EditorSkyBox**, *\<string\>*, Path to a folder containing the new textures for the editor skybox.
     
-    ```
-    If set to ```GalaxyTex``` the galaxy skybox will be used.
+    <pre>
+    If set to '<i>GalaxyTex</i>' the galaxy skybox will be used.
     
-    If used to define a path of a folder, it must end in ```/```. Files must be named ```Sunny3_up```, ```Sunny3_down```, ```Sunny3_left```, ```Sunny3_right```, ```Sunny3_front```, ```Sunny3_back```.
-    ```
+    If used to define a path of a folder, it must end in '/'.
+    
+    Files must be named '<i>Sunny3_up</i>', '<i>Sunny3_down</i>', '<i>Sunny3_left</i>', '<i>Sunny3_right</i>', '<i>Sunny3_front</i>', '<i>Sunny3_back</i>'.
+    </pre>
     
   - **EditorGroundTex**, *\<string\>*, Name of the texture to be used for the ground visible outside.
 		
