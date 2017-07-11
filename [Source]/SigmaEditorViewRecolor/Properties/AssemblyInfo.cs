@@ -9,5 +9,4 @@
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: KSPAssembly("SigmaEditorViewRecolor", 1, 0)]
-[assembly: KSPAssemblyDependency("Kopernicus", 1, 0)]
 [assembly: AssemblyVersion("1.0.0")]

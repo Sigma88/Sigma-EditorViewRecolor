@@ -45,7 +45,7 @@ namespace SigmaEditorViewRecolorPlugin
             if (!string.IsNullOrEmpty(groundTex))
                 TextureFixer.groundTex = Resources.FindObjectsOfTypeAll<Texture>().FirstOrDefault(t => t?.name == groundTex);
 
-            color = GetColor(fogColor);
+            color = Get.Color(fogColor);
             if (color != null)
                 TextureFixer.fogColor = color;
 
@@ -55,34 +55,10 @@ namespace SigmaEditorViewRecolorPlugin
             {
                 TextureFixer.fogEnabled = true;
 
-                Color? color = GetColor(groundColor);
+                Color? color = Get.Color(groundColor);
                 if (color != null)
                     TextureFixer.groundColor = color;
             }
-        }
-
-        Color? GetColor(string[] s)
-        {
-            Color? color = null;
-            if (s?.Length == 3 || s?.Length == 4)
-            {
-                float r;
-                float g;
-                float b;
-                float a;
-                if (float.TryParse(s[0], out r) && float.TryParse(s[1], out g) && float.TryParse(s[2], out b))
-                {
-                    if (s.Length == 4 && float.TryParse(s[3], out a))
-                    {
-                        color = new Color(r, g, b, a);
-                    }
-                    else
-                    {
-                        color = new Color(r, g, b);
-                    }
-                }
-            }
-            return color;
         }
     }
 
