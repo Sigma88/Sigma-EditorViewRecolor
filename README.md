@@ -56,3 +56,19 @@ The SigmaEditorViewRecolor settings node can contain the following settings:
     ```
     Must be a unity color. (e.g. white = 1,1,1,1)
     ```
+    
+  - **KSCGroundTex**, *\<string\>*, Name of the texture to be used for the KSC ground.
+		
+    ```
+    Only available when Kopernicus is not installed.
+    
+    Can be used to load both custom or stock textures.
+    ```
+    
+  - **KSCGroundColor**, *\<Color\>*, Color of the texture used for the KSC ground.
+		
+    ```
+    Only available when Kopernicus is not installed.
+    
+    Must be a unity color. (e.g. white = 1,1,1,1)
+    ```
