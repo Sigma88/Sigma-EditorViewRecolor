@@ -25,8 +25,6 @@ namespace SigmaEditorViewRecolorPlugin
                 kscGroundTex = Resources.FindObjectsOfTypeAll<Texture>().FirstOrDefault(t => t?.name == groundTex);
 
             Color? color = Get.Color(groundColor);
-            if (color != null)
-                TextureFixer.fogColor = color;
 
             foreach (Material material in Resources.FindObjectsOfTypeAll<Material>().Where(m => m.name == "ksc_exterior_terrain_grass_02"))
             {
