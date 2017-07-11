@@ -77,6 +77,8 @@ namespace SigmaEditorViewRecolorPlugin
         internal static Color? fogColor;
         static bool skip = false;
 
+        static Material[] ignore = null;
+
         void Awake()
         {
             skip = false;
@@ -126,6 +128,8 @@ namespace SigmaEditorViewRecolorPlugin
                 RenderSettings.fog = false;
             else if (fogColor != null)
                 RenderSettings.fogColor = (Color)fogColor;
+
+            ignore = Resources.FindObjectsOfTypeAll<Material>();
         }
 
         void Update()
@@ -138,13 +142,17 @@ namespace SigmaEditorViewRecolorPlugin
                 if (ground != null)
                 {
                     skip = true;
-                    Material material = ground.GetComponent<Renderer>()?.material;
-                    if (material != null)
+
+                    Material[] materials = Resources.FindObjectsOfTypeAll<Material>().Where(m => (m?.name == "ksc_terrain_TX" || m?.name == "ksc_exterior_terrain_grass_02") && !ignore.Contains(m)).ToArray();
+                    for (int i = 0; i < materials?.Length; i++)
                     {
-                        if (groundTex != null)
-                            material.mainTexture = groundTex;
-                        if (groundColor != null)
-                            material.SetColor("_Color", (Color)groundColor);
+                        if (materials?[i]?.mainTexture != null)
+                        {
+                            if (groundTex != null)
+                                materials[i].mainTexture = groundTex;
+                            if (groundColor != null)
+                                materials[i].color = (Color)groundColor;
+                        }
                     }
                 }
             }
