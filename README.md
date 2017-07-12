@@ -1,14 +1,14 @@
-# Sigma EditorViewRecolor
+# Sigma EditorView Recolor
 
 
 **Allows to recolor the outside view of the editor scenes**
 
 
-KSP Forum Thread: http://forum.kerbalspaceprogram.com/index.php?/topic/126548-0/
+KSP Forum Thread: http://forum.kerbalspaceprogram.com/index.php?/topic/163184-0/
 
-Download Latest Release: https://github.com/Sigma88/Sigma-Dimensions/releases/latest
+Download Latest Release: https://github.com/Sigma88/Sigma-EditorViewRecolor/releases/latest
 
-Dev version: https://github.com/Sigma88/Sigma-Dimensions/tree/Development
+Dev version: https://github.com/Sigma88/Sigma-EditorViewRecolor/tree/Development
 
 
 # Settings
